@@ -1,7 +1,7 @@
 # bridge_deals_db  
 DB of bridge team games scraped from BBO and other repositories, along with analytics derived from these deals  
-The repository has the following files:  
-bridge_deals.tar.gz: gzipped tar file with all the deals, organized by file type, then by year and event.  
+The repository has the following folders, saved as gzipeed tar files:  
+bridge_deals: Folder with all the deals, organized by file type, then by year and event.  
   -- LIN files are from BBO vugraphs. I have gathered all files from 2020 to April 2025  
   -- RBN files are from Richard Pavlicek's collection (don't think it is available online anymore)  
   -- JSON files are from Wojitek Balcerak's collection (https://balcerak.de/bridge/downloads.html)  
