@@ -1,6 +1,6 @@
 # bridge_deals_db  
-DB of bridge team games scraped from BBO and other repositories, along with analytics derived from these deals  
-The repository has the following folders, saved as gzipeed tar files:  
+DB of bridge team games scraped from BBO and other repositories, along with analytics derived from these deals. 
+The repository has the following folders under Releases (https://github.com/ureshvahalia/bridge_deals_db/releases), saved as gzipeed tar files:  
 ## bridge_deals: 
 Folder with all the deals, organized by file type, then by year and event.  
   -- LIN files are from BBO vugraphs. I have gathered all files from 2020 to April 2025  
