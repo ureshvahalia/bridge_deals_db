@@ -7,7 +7,8 @@ Folder with all the deals, organized by file type, then by year and event.
   -- RBN files are from Richard Pavlicek's collection (don't think it is available online anymore)  
   -- JSON files are from Wojitek Balcerak's collection (https://balcerak.de/bridge/downloads.html)  
   -- PBN files are from https://www.tistis.nl/pbn, https://github.com/ContractBridge/pbn-files, and   
-  -- https://www.angelfire.com/games2/pbnarchive/pbn/index.htm  
+     https://www.angelfire.com/games2/pbnarchive/pbn/index.htm  
+  -- CSV files are from https://vugraph.lovebridge.com/
 ## RawDB: 
 Folder with all the deals extracted from the respective formats and stored as csv files. This contains:  
   -- RawData.csv All ingested records with minimal processing  
