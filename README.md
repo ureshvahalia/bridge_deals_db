@@ -5,13 +5,13 @@ The repository has the following folders under Releases (https://github.com/ures
 Folder with all the deals, organized by file type, then by year and event.  
   -- LIN files are from BBO vugraphs. I have gathered all files from 2020 to April 2025  
   -- RBN files are from Richard Pavlicek's collection (don't think it is available online anymore)  
+  -- CSV files are from vugraph.lovebridge.com (downloaded all available events as of Mar 09, 2026)  
   -- JSON files are from Wojitek Balcerak's collection (https://balcerak.de/bridge/downloads.html)  
   -- PBN files are from https://www.tistis.nl/pbn, https://github.com/ContractBridge/pbn-files, and   
      https://www.angelfire.com/games2/pbnarchive/pbn/index.htm  
-  -- CSV files are from https://vugraph.lovebridge.com/
 ## RawDB: 
 Folder with all the deals extracted from the respective formats and stored as csv files. This contains:  
-  -- RawData.csv All ingested records with minimal processing  
+  -- RawData.csv All ingested records with minimal processing (Play as parsed from the source)  
   -- all.csv: Flat file with all data and validation flags  
   -- events.csv: Unique events and matches  
   -- deals.csv Unique deals (hands + dealer + vulnerability + match)  
@@ -26,6 +26,18 @@ Folder with results of analysis of these deals. This contains:
   -- Summary.csv: Key summary results from the analysis  
   -- Openings.csv: Analysis of opening bids and their outcome  
   -- EarlyBids.csv: Analysis of competitive situations where one table opens and the other does not  
+
+# Notes:
+In all.csv and boards.csv, Play holds the cards in play order separated by "_" (e.g. SJ_SK_S2_S4) for every
+source. PlayEncoding says how the play was recorded in the source:  
+  -- order: already in play order (LIN, RBN, JSON, CSV)  
+  -- pbn: PBN seat-column tricks, reordered into play order using the deal and contract  
+  -- pbn_raw: PBN seat-column tricks with no contract or declarer to reorder them; Play kept as recorded  
+  -- bad: play could not be parsed; Play kept as recorded  
+  -- empty: no play recorded  
+
+pbn_raw and bad are rare, so Play is in play order for nearly all boards.  
+Claim is declarer's claimed total, from LIN and EBL/WBF JSON sources.  
 
 # Analytics Software: 
 The software to parse the deals and create the processed files in RawDB and analytics output in Analysis
